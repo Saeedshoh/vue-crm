@@ -3,11 +3,12 @@ import App from './App.vue'
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 import router from './router'
+import dataFilter from './filters/date_filters'
 import store from './store'
 
 
 Vue.config.productionTip = false
-
+Vue.filter('date', dataFilter)
 new Vue({
   router,
   store,
